@@ -18,7 +18,7 @@
                 <div class="titulo">
                     <h1>Fidelidade</h1>
                 </div>
-                <div class="dados_cliente">
+                <div id="cliente" class="dados_cliente">
                     <h1>Fulano de Tals</h1>
                     <h1>Data da compra</h1>
                     <h1>Pontos GErados</h1>
@@ -34,10 +34,13 @@
 </html>
 
 <script>
-const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get('myParam');
-console.log(myParam)
-    // var element = document.getElementById('element');
-    // var meuTeste = 'Teste VAriavel!';
-    // element.innerHTML = meuTeste;
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('data');
+
+    const meusDados = JSON.parse(myParam); 
+
+    const element = document.getElementById('cliente');
+    var meuTeste = `<h1>${meusDados.nome}</h1>`;
+    element.innerHTML = meuTeste;
+
 </script>
