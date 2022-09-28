@@ -35,10 +35,10 @@
 
 <script>
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('data');
+    var urlParams = new URLSearchParams(window.location.search);
+    var myParam = urlParams.get('data');
 
-    const meusDados = JSON.parse(myParam); 
+    var meusDados = JSON.parse(myParam); 
 
     const element = document.getElementById('cliente');
     var meuTeste = `<h1>${meusDados.nome}</h1>`;
