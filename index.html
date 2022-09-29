@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta http-equiv="refresh" content="0; URL='https://cleitonbrandao.github.io/qr_teste/'"/>
+    <!-- <meta http-equiv="refresh" content="0; URL='https://cleitonbrandao.github.io/qr_teste/'"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet">
     <title>Visualizador QR-Code</title>
@@ -41,7 +41,14 @@
     var meusDados = JSON.parse(myParam); 
 
     const element = document.getElementById('cliente');
-    var meuTeste = `<h1>${meusDados.nome}</h1>`;
+    console.log(meusDados.nome);
+    var meuTeste = `
+                    <h1>${meusDados[0].nome}</h1>
+                    <h1>${meusDados[0].sobrenome}</h1>
+                    <h1>${meusDados[0].data}</h1>
+                    <h1>${meusDados[0].pontos}</h1>
+                    <h1>${meusDados[0].carencia}</h1>
+                    <h1>${meusDados[0].validade}</h1>`;
     element.innerHTML = meuTeste;
 
 </script>
