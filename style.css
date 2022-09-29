@@ -132,7 +132,9 @@ table {
     align-items: left;
     justify-content: space-evenly;
     border-radius: 10px;
-    background-color: brown;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
 }
 
 .dados_cliente p {
@@ -153,7 +155,8 @@ table {
     align-items: center;
     justify-content: space-evenly;
     border-radius: 10px;
-    background-color: brown;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 }
 .pontos p {
     text-align: left;
