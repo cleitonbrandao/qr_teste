@@ -59,6 +59,7 @@ table {
 
 }
 
+
 .base {
     height: 75vh;
     width: 70vw;
@@ -161,12 +162,14 @@ table {
     font-weight: 100;
 }
 
-#topo_esquerdo {
+.topo_esquerdo {
     position: absolute;
     z-index: 1;
     width: 60vw;
     top: 0px;
     left: 0px;
+    filter: drop-shadow(5px 3px 5px rgb(171, 169, 169));
+
 }
 
 .efeito-vidro {
@@ -192,3 +195,21 @@ table {
     margin-top: 1rem;
     border-radius: 10px;
  }
+
+ @media (min-width: 600px) {
+    .base {
+        width: 490px;
+    }
+    .dados_cliente {
+        width: 390px;
+    }
+    .pontos {
+        width: 390px;
+    }
+    .animated {
+        width: 200px;
+    }
+    .topo_esquerdo {
+        width: 360px;
+    }
+}
