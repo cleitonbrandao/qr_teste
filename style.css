@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@300&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,8 +25,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
+    background-color: rgb(224, 224, 224);
 }
 ol, ul {
     list-style: none;
@@ -42,53 +46,149 @@ table {
     border-spacing: 0;
 }
 
+
 .container{
+    position: absolute;
+    z-index: 3;
     height: 100vh;
     width: 100vw;   
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center; 
+
 }
 
 .base {
-    height: 90vh;
+    height: 75vh;
     width: 70vw;
-    background-color: rgb(128, 128, 128);
-    border-radius: 1%;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 2% solid rgba( 255, 255, 255, 0.18 );
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     justify-items: center;
 }
 
+
 .cabecalho {
-    height: 10vh;
-    width: 50vw;
+    height: 5rem;
+    width: 5rem;
     background-color: antiquewhite;
+    position: absolute;
+    z-index: 3;
+    left: 10px;
+    top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 10px;
+    border-radius: 50%;
+    border: 8px solid rgb(220, 187, 187);
+    box-shadow: 3px 2px 10px 0.8px rgba(0, 0, 0, 0.2);
 }
+#logo_empresa {
+    width: 4rem;
+    filter: drop-shadow(3px 2px 3px rgb(139, 135, 135));
+}
+#texto_logo {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 .titulo {
     height: 5vh;
     width: 50vw;
-    background-color: aliceblue;
+    margin-top: 3rem;
+    /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 8px;
 }
+#texto_titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(58, 21, 21);
+}
 .dados_cliente {
-    height: 50vh;
-    width: 50vw;
-    background-color: beige;
+    height: 15vh;
+    width: 60vw;
+    top: 100em;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: brown;
+}
+
+.dados_cliente p {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+.pontos {
+    height: 15vh;
+    width: 60vw;
+    top: 100em;
+    margin-top: 2rem;
+    margin-right: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 10px;
+    background-color: brown;
 }
+.pontos p {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+#topo_esquerdo {
+    position: absolute;
+    z-index: 1;
+    width: 60vw;
+    top: 0px;
+    left: 0px;
+}
+
+.efeito-vidro {
+    height: 90vh;
+    width: 70vw;
+    top: -30vh;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 1%;
+    border: 1% solid rgba( 255, 255, 255, 0.18 );
+  }
+  .roda_pe {
+    margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+ .animated {
+    width: 30vw;
+    margin-top: 1rem;
+    border-radius: 10px;
+ }

@@ -2,38 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta http-equiv="refresh" content="0; URL='https://cleitonbrandao.github.io/qr_teste/'"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet">
+    
     <title>Visualizador QR-Code</title>
 </head>/
     <body>
         <div class="container">
+            <div class="cabecalho">
+                <img id="logo_empresa" src="./img/logo_petzo.png"/>
+            </div>
             <div class="base">
-                <div class="cabecalho">
-                    <h1 id="nome_empresa">Teste Alguma</h1>
-                    <p> Endereço alguma ai numa caixa de texto</p>
-                </div>
-                <div class="titulo">
-                    <h1>Fidelidade</h1>
-                </div>
-                <div class="dados_cliente">
-                    <h1>Fulano de Tals</h1>
-                    <h1>Data da compra</h1>
-                    <h1>Pontos GErados</h1>
-                    <h1>Carência</h1>
-                    <h1>Validade</h1>
-                </div>
-                <div class="roda_pe">
-                    <h1>Endereço da loja</h1>
-                </div>
+                    <div class="titulo">
+                        <h1 id="texto_titulo">Fidelidade</h1>
+                    </div>
+                    <div id="cliente" class="dados_cliente">
+                        <p>Primeiro Nome Sobrenome</p>
+                        <p>Data da compra</p>
+                        <p>Pontos Gerados</p>
+                    </div>
+                    <div class="pontos">
+                        <p>validade</p>
+                        <p>Disponiveis a partir de</p>
+                    </div>
+                    <img class="animated" src="./img/animated.gif" alt="">
+            </div>
+            <div class="roda_pe">
+                <h1>Endereço da loja</h1>
             </div>
         </div>
+        <img id="topo_esquerdo" src="./img/topo_esquerdo.svg" alt="">
     </body>
 </html>
 
 <script>
-    // var element = document.getElementById('element');
-    // var meuTeste = 'Teste VAriavel!';
-    // element.innerHTML = meuTeste;
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var myParam = urlParams.get('data');
+
+    var meusDados = JSON.parse(myParam); 
+
+    const element = document.getElementById('cliente');
+    console.log(meusDados.nome);
+    var meuTeste = `
+                    <h1>${meusDados[0].nome}</h1>
+                    <h1>${meusDados[0].sobrenome}</h1>
+                    <h1>${meusDados[0].data}</h1>
+                    <h1>${meusDados[0].pontos}</h1>
+                    <h1>${meusDados[0].carencia}</h1>
+                    <h1>${meusDados[0].validade}</h1>`;
+    element.innerHTML = meuTeste;
 </script>
