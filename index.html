@@ -19,18 +19,12 @@
                         <h1 id="texto_titulo">Fidelidade</h1>
                     </div>
                     <div id="cliente" class="dados_cliente">
-                        <p>Primeiro Nome Sobrenome</p>
-                        <p>Data da compra</p>
-                        <p>Pontos Gerados</p>
                     </div>
                     <div id="pontuacao" class="pontos">
-                        <p>validade</p>
-                        <p>Disponiveis a partir de</p>
                     </div>
                     <img class="animated" src="./img/animated.gif" alt="">
             </div>
             <div id="endereco" class="roda_pe">
-                <h1>Endereço da loja</h1>
             </div>
         </div>
         <img class="topo_esquerdo" id="topo_esquerdo" src="./img/topo_esquerdo.svg" alt="">
@@ -56,10 +50,14 @@
                             <p>Disponivel a partir de
                             <p>${meusDados[0].carencia}</p>
                         `;
+    const endereco = `
+                        <p>${meusDados[0].endereco}</p>
+                    `;
     
     pegarElemento('cliente').innerHTML = dadosDaCompra;
     pegarElemento('pontuacao').innerHTML = dadosPontuacao;
-
+    pegarElemento('endereco').innerHTML = endereco;
+    
     function pegarElemento(ID) {
         return document.getElementById(ID);
     }

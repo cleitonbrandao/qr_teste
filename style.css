@@ -187,14 +187,22 @@ table {
     border: 1% solid rgba( 255, 255, 255, 0.18 );
   }
   .roda_pe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+  }
+  .roda_pe p {
     margin-top: 1rem;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 0.7rem;
+    font-weight: 200;
   }
 
  .animated {
-    width: 30vw;
+    width: 20vw;
     margin-top: 1rem;
     border-radius: 10px;
  }
