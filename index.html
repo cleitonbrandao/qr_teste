@@ -36,24 +36,24 @@
 <script>
 
     const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('data');
-
+    var myParam = urlParams.get('data');
+    myParam = atob(myParam);
     const meusDados = JSON.parse(myParam); 
 
     const dadosDaCompra = `
-                    <p>Cliente: ${meusDados[0].nome} ${meusDados[0].sobrenome}</p>
-                    <p>Data da Compra: ${meusDados[0].data}</p>
-                    <p>Pontos: ${meusDados[0].pontos}</p>
+                    <p>Cliente: ${meusDados.nome} ${meusDados.sobrenome}</p>
+                    <p>Data da Compra: ${meusDados.data}</p>
+                    <p>Pontos: ${meusDados.pontos}</p>
                 `;
     const dadosPontuacao = `
                             <p>Validade dos Pontos<p/>
-                            <p>${meusDados[0].validade}</p>
+                            <p>${meusDados.validade}</p>
                             <hr size="1" width="50%">
                             <p>Disponivel a partir de
-                            <p>${meusDados[0].carencia}</p>
+                            <p>${meusDados.carencia}</p>
                         `;
     const endereco = `
-                        <p>${meusDados[0].endereco}</p>
+                        <p>${meusDados.endereco}</p>
                     `;
     
     pegarElemento('cliente').innerHTML = dadosDaCompra;
