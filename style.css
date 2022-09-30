@@ -75,26 +75,15 @@ table {
     justify-items: center;
 }
 
-
-.cabecalho {
-    height: 5rem;
-    width: 5rem;
-    background-color: antiquewhite;
-    position: absolute;
-    z-index: 3;
-    left: 10px;
-    top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 50%;
-    border: 8px solid rgb(220, 187, 187);
-    box-shadow: 3px 2px 10px 0.8px rgba(0, 0, 0, 0.2);
-}
 #logo_empresa {
-    width: 4rem;
-    filter: drop-shadow(3px 2px 3px rgb(139, 135, 135));
+    width: 20%;
+    position: absolute;
+    z-index: 10;
+    top: 5%;
+    left: 40%;
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+
+    filter: drop-shadow(5px 3px 5px rgb(15, 23, 69));
 }
 #texto_logo {
     text-align: center;
@@ -172,7 +161,15 @@ table {
     top: 0px;
     left: 0px;
     filter: drop-shadow(5px 3px 5px rgb(171, 169, 169));
+}
 
+.inferior_direito {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    bottom: -50px;
+    right: -20px;
+    filter: drop-shadow(5px 3px 5px rgb(171, 169, 169));
 }
 
 .efeito-vidro {
@@ -221,6 +218,15 @@ table {
         width: 200px;
     }
     .topo_esquerdo {
-        width: 360px;
+        width: 60vw;
+    }
+    .inferior_direito {
+        width: 70vw;
+    }
+}
+@media (min-width: 1000px) {
+    #logo_empresa {
+        width: 15%;
+        left: 43%;
     }
 }

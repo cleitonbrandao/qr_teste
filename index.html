@@ -10,10 +10,8 @@
     <title>QRcode</title>
 </head>/
     <body>
-        <div class="container">
-            <div class="cabecalho">
                 <img id="logo_empresa" src="./img/logo_petzo.png"/>
-            </div>
+        <div class="container">
             <div class="base">
                     <div class="titulo">
                         <h1 id="texto_titulo">Fidelidade</h1>
@@ -28,6 +26,7 @@
             </div>
         </div>
         <img class="topo_esquerdo" id="topo_esquerdo" src="./img/topo_esquerdo.svg" alt="">
+        <img class="inferior_direito" id="topo_esquerdo" src="./img/inferior_direito.svg" alt="">
     </body>
 </html>
 
@@ -57,7 +56,7 @@
     pegarElemento('cliente').innerHTML = dadosDaCompra;
     pegarElemento('pontuacao').innerHTML = dadosPontuacao;
     pegarElemento('endereco').innerHTML = endereco;
-    
+
     function pegarElemento(ID) {
         return document.getElementById(ID);
     }
