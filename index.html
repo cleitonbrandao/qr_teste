@@ -21,7 +21,7 @@
                         </div>
                         <div id="pontuacao" class="pontos">
                         </div>
-                        <img class="animated" src="./img/animated.gif" alt="">
+                        <img  class="animated" src="./img/animated.gif" alt="">
                 </div>
                 <div id="endereco" class="roda_pe">
                 </div>
@@ -41,26 +41,27 @@
     const meusDados = JSON.parse(myParam); 
 
     const dadosDaCompra = `
-                    <p>Cliente: ${meusDados.nome} ${meusDados.sobrenome}</p>
-                    <p>Data da Compra: ${meusDados.data}</p>
-                    <p>Pontos: ${meusDados.pontos}</p>
+                    <p><b>Cliente:</b> ${meusDados.nome} ${meusDados.sobrenome}</p>
+                    <p><b>Data da Compra:</b> ${meusDados.data}</p>
+                    <p><b>Pontos:</b> ${meusDados.pontos}</p>
                 `;
     const dadosPontuacao = `
-                            <p>Validade dos Pontos<p/>
-                            <p>${meusDados.validade}</p>
+                            <p><b>Validade dos Pontos</b><p/>
+                            <p><b>${meusDados.validade}</b></p>
                             <hr size="1" width="50%">
-                            <p>Disponivel a partir de
+                            <p><b>Disponivel a partir de</b>
                             <p>${meusDados.carencia}</p>
                         `;
     const endereco = `
-                        <p>${meusDados.endereco}</p>
+                        <p></b>${meusDados.endereco}</b></p>
                     `;
     
     pegarElemento('cliente').innerHTML = dadosDaCompra;
     pegarElemento('pontuacao').innerHTML = dadosPontuacao;
     pegarElemento('endereco').innerHTML = endereco;
-
+    
     function pegarElemento(ID) {
         return document.getElementById(ID);
     }
+
 </script>
